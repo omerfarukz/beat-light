@@ -1,2 +1,2 @@
 # beat-light
-Source code of the app publish on 2016.
+Source code of the app publish in 2016.
