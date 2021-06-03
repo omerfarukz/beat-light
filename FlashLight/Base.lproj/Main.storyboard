@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlashLight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Torch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkK-Y9-rAg">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="97" y="228.5" width="206" height="43"/>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjQ-Ly-QBX">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Tmx-aT-ibz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JaN-Bd-kVP"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7p-cO-syX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="P3q-Js-hib" kind="show" id="QcF-Zg-uJp"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-App-iPad-Pro" translatesAutoresizingMaskIntoConstraints="NO" id="2bU-2Z-aOF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="JdE-vM-X2k">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="90" id="mb5-Pk-OOs">
+                                        <variation key="widthClass=compact" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JdE-vM-X2k"/>
+                                        <exclude reference="mb5-Pk-OOs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="170" y="148.5" width="60" height="60"/>
+                                    <mask key="constraints">
+                                        <include reference="JdE-vM-X2k"/>
+                                        <include reference="mb5-Pk-OOs"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jjQ-Ly-QBX" secondAttribute="trailing" id="CyJ-Az-2xk"/>
+                            <constraint firstItem="DkK-Y9-rAg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="G9l-1E-aIa">
+                                <variation key="widthClass=compact" constant="-50"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="G7p-cO-syX" secondAttribute="trailing" constant="10" id="RkM-tj-0MJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jjQ-Ly-QBX" secondAttribute="bottom" id="T9Z-CM-NvJ">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="DkK-Y9-rAg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="epn-Lb-Bz8"/>
+                            <constraint firstItem="jjQ-Ly-QBX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pRx-Pi-YzF"/>
+                            <constraint firstItem="2bU-2Z-aOF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qvd-pl-KOe"/>
+                            <constraint firstItem="G7p-cO-syX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="tWO-im-z8U"/>
+                            <constraint firstItem="DkK-Y9-rAg" firstAttribute="top" secondItem="2bU-2Z-aOF" secondAttribute="bottom" constant="15" id="tu1-P1-BMT">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="DkK-Y9-rAg"/>
+                                <exclude reference="G7p-cO-syX"/>
+                                <exclude reference="2bU-2Z-aOF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="CyJ-Az-2xk"/>
+                                <exclude reference="pRx-Pi-YzF"/>
+                                <exclude reference="T9Z-CM-NvJ"/>
+                                <exclude reference="RkM-tj-0MJ"/>
+                                <exclude reference="tWO-im-z8U"/>
+                                <exclude reference="G9l-1E-aIa"/>
+                                <exclude reference="epn-Lb-Bz8"/>
+                                <exclude reference="tu1-P1-BMT"/>
+                                <exclude reference="qvd-pl-KOe"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="DkK-Y9-rAg"/>
+                                <include reference="G7p-cO-syX"/>
+                                <include reference="2bU-2Z-aOF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="CyJ-Az-2xk"/>
+                                <include reference="pRx-Pi-YzF"/>
+                                <include reference="T9Z-CM-NvJ"/>
+                                <include reference="RkM-tj-0MJ"/>
+                                <include reference="tWO-im-z8U"/>
+                                <include reference="G9l-1E-aIa"/>
+                                <include reference="epn-Lb-Bz8"/>
+                                <include reference="tu1-P1-BMT"/>
+                                <include reference="qvd-pl-KOe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="43c-s6-dm1"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="uiPicker" destination="jjQ-Ly-QBX" id="OqC-2K-7gB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786.5" y="336"/>
+        </scene>
+        <!--Settings Controller-->
+        <scene sceneID="FGM-xG-nkD">
+            <objects>
+                <viewController id="P3q-Js-hib" customClass="SettingsController" customModule="FlashLight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cfs-aR-Kbl"/>
+                        <viewControllerLayoutGuide type="bottom" id="rdp-0H-VT3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2fV-oo-yPH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usy-uJ-BxG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="vIC-3l-DGj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mU-1V-Ot7">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Icon made by ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Freepik">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <url key="NSLink" string="http://www.flaticon.com/authors/freepik"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" from ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="www.flaticon.com">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <url key="NSLink" string="http://www.flaticon.com/"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="deviceRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="88" y="466" width="224" height="14"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ivatek studio © 2016 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kva-EP-emP">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kva-EP-emP" secondAttribute="trailing" id="6xh-b4-zVJ"/>
+                            <constraint firstItem="6mU-1V-Ot7" firstAttribute="centerX" secondItem="2fV-oo-yPH" secondAttribute="centerX" id="97P-My-Mj7"/>
+                            <constraint firstItem="kva-EP-emP" firstAttribute="leading" secondItem="2fV-oo-yPH" secondAttribute="leading" id="BDg-gn-RhX"/>
+                            <constraint firstItem="rdp-0H-VT3" firstAttribute="top" secondItem="Usy-uJ-BxG" secondAttribute="bottom" constant="40" id="Gf6-er-mn9"/>
+                            <constraint firstItem="kva-EP-emP" firstAttribute="centerY" secondItem="2fV-oo-yPH" secondAttribute="centerY" id="Ubx-do-qHt"/>
+                            <constraint firstItem="Usy-uJ-BxG" firstAttribute="centerX" secondItem="2fV-oo-yPH" secondAttribute="centerX" id="kS9-EB-p91"/>
+                            <constraint firstItem="Usy-uJ-BxG" firstAttribute="top" secondItem="6mU-1V-Ot7" secondAttribute="bottom" constant="50" id="mwc-5m-0cz"/>
+                            <constraint firstItem="kva-EP-emP" firstAttribute="centerX" secondItem="2fV-oo-yPH" secondAttribute="centerX" id="nME-75-pcI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Usy-uJ-BxG"/>
+                                <exclude reference="6mU-1V-Ot7"/>
+                                <exclude reference="kva-EP-emP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6xh-b4-zVJ"/>
+                                <exclude reference="BDg-gn-RhX"/>
+                                <exclude reference="Ubx-do-qHt"/>
+                                <exclude reference="nME-75-pcI"/>
+                                <exclude reference="97P-My-Mj7"/>
+                                <exclude reference="Gf6-er-mn9"/>
+                                <exclude reference="kS9-EB-p91"/>
+                                <exclude reference="mwc-5m-0cz"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Usy-uJ-BxG"/>
+                                <include reference="6mU-1V-Ot7"/>
+                                <include reference="kva-EP-emP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6xh-b4-zVJ"/>
+                                <include reference="BDg-gn-RhX"/>
+                                <include reference="Ubx-do-qHt"/>
+                                <include reference="nME-75-pcI"/>
+                                <include reference="97P-My-Mj7"/>
+                                <include reference="Gf6-er-mn9"/>
+                                <include reference="kS9-EB-p91"/>
+                                <include reference="mwc-5m-0cz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0Q-NQ-ZCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2706" y="336"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-App-iPad-Pro" width="167" height="167"/>
+    </resources>
+</document>
