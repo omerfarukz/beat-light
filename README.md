@@ -1,7 +1,7 @@
 # beat-light
 Demo source code of the app publish in 2016.
 
-![icon](beat_light.png
+![icon](beat_light.png)
 
 http://itunes.apple.com/app/id1176918096?mt=8
 
