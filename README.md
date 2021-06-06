@@ -1,5 +1,5 @@
 # beat-light
-Demo source code of the app publish in 2016.
+Source code(preview) of the app. Publish in 2016.
 
 ![icon](beat_light.png)
 
